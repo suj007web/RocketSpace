@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,6 +11,7 @@ const SignIn = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -18,9 +19,9 @@ const SignIn = () => {
 
     setLoading(true);
     setError(null);
-
+    
     try {
-      const response = await axios.post('http://localhost:8080/api/v1/users/register', {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/users/register`, {
         username:name,
         email,
         password,

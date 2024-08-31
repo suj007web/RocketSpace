@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';  // Import useState and useEffect
+
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Chatbot from "./Components/Chatbot";
@@ -6,11 +6,12 @@ import Marketplace from "./Components/Marketplace";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Totalizer from "./Components/Totalizer";
-import axios from 'axios';
+
 import Features from "./Components/Features";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TextTo3D from "./Components/TextTo3D";
 import SignIn from './Components/SignIn';
+import VR from "./Components/VR";
 
 function App() {
   // const [products, setProducts] = useState([]);
@@ -63,6 +64,7 @@ function App() {
           <Route path="/textto3d" element={<TextTo3D />} />
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path='/signin' element={<SignIn/>}/>
+          <Route path="/vr" element={<VR/>}/>
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -129,6 +129,7 @@ const Links = () => (
     <GlassLink text="Home" href={"/"} />
     <GlassLink text="Products" href="/marketplace" />
     <GlassLink text="ChatBot" href={"/chatbot"} />
+    <GlassLink text="VR" href={"/vr"}/>
   </div>
 );
 
